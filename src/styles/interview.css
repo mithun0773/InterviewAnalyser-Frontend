@@ -1,0 +1,50 @@
+.battle-container { max-width: 1150px; margin: 0 auto; padding: 40px 20px; }
+.gradient-text { background: linear-gradient(90deg, #6366f1, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; }
+
+.config-glass-panel {
+  background: white; border: 1px solid #e2e8f0; border-radius: 30px;
+  padding: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); margin-bottom: 40px;
+}
+
+/* Role Cards */
+.role-scroller { display: flex; gap: 15px; overflow-x: auto; padding-bottom: 15px; scrollbar-width: none; }
+.role-pill-card {
+  min-width: 180px; padding: 12px 20px; border: 2px solid #f1f5f9;
+  border-radius: 18px; display: flex; align-items: center; gap: 12px; cursor: pointer; transition: 0.3s;
+}
+.role-pill-card.active { border-color: #6366f1; background: #f5f3ff; transform: translateY(-3px); }
+
+/* Difficulty Segmented Toggle */
+.difficulty-segmented { background: #f1f5f9; padding: 5px; border-radius: 15px; display: flex; gap: 5px; }
+.seg-btn {
+  border: none; padding: 10px 25px; border-radius: 10px; font-weight: 700;
+  cursor: pointer; color: #64748b; transition: 0.2s;
+}
+.seg-btn.active { background: white; color: #1e293b; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+.seg-btn.active.easy { color: #166534; }
+.seg-btn.active.hard { color: #991b1b; }
+
+/* The Fire Button */
+.ultra-fire-btn {
+  background: #0f172a; color: white; border: none; padding: 15px 40px;
+  border-radius: 15px; font-weight: 800; cursor: pointer; position: relative; overflow: hidden;
+}
+.scanning-line {
+  position: absolute; top: 0; left: 0; width: 100%; height: 2px;
+  background: #6366f1; box-shadow: 0 0 15px #6366f1; animation: scan 1.5s infinite;
+}
+@keyframes scan { 0% { top: 0%; } 100% { top: 100%; } }
+
+/* Question Cards */
+.q-bento-card {
+  background: white; border: 1px solid #e2e8f0; border-radius: 24px;
+  padding: 30px; margin-bottom: 20px; transition: 0.3s;
+}
+.q-bento-card:hover { transform: scale(1.01); border-color: #6366f1; }
+.coach-tip-box { background: #f0f7ff; color: #1e40af; padding: 15px; border-radius: 12px; font-size: 0.9rem; margin: 15px 0; }
+
+/* Terminal Answer Box */
+.terminal-box { background: #0f172a; border-radius: 15px; overflow: hidden; margin-top: 20px; border: 1px solid #334155; }
+.terminal-top { background: #1e293b; padding: 10px 15px; color: #94a3b8; font-size: 0.75rem; display: flex; justify-content: space-between; }
+.t-dots span { height: 8px; width: 8px; border-radius: 50%; display: inline-block; margin-right: 5px; background: #475569; }
+.terminal-box pre { padding: 20px; color: #cbd5e1; font-family: 'Fira Code', monospace; font-size: 0.9rem; line-height: 1.6; white-space: pre-wrap; }

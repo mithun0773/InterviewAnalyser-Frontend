@@ -1,0 +1,47 @@
+:root {
+  --neon-cyan: #00f2fe;
+  --neon-purple: #9d50bb;
+  --glass: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --bg-dark: #030712;
+}
+
+/* The "Power" Background - Add this to every page container */
+.unified-ai-wrapper {
+  background: var(--bg-dark);
+  min-height: 100vh;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Background Animated Orbs */
+.orb {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15;
+  z-index: 0;
+  pointer-events: none;
+}
+.orb-1 { top: -10%; left: -10%; background: var(--neon-cyan); }
+.orb-2 { bottom: -10%; right: -10%; background: var(--neon-purple); }
+
+/* Unified Heading */
+.ai-header-group {
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.ai-header-group h1 {
+  font-size: 3rem;
+  background: linear-gradient(90deg, #fff, var(--neon-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}

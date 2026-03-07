@@ -1,0 +1,83 @@
+:root {
+  --topbar-height: 70px;
+  --accent: #6366f1;
+}
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f8fafc; /* Subtle background for bento cards to pop */
+}
+
+/* Topbar Styling */
+.topbar {
+  height: var(--topbar-height);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px); /* Trending glass effect */
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  position: fixed; /* Keep it fixed to top */
+  top: 0;
+  width: 100%;
+  z-index: 2000; /* Highest priority */
+}
+
+.top-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1e293b;
+  letter-spacing: -0.5px;
+}
+
+.top-title span {
+  color: var(--accent);
+}
+
+/* Main Content Area */
+.main-content {
+margin-top: 70px; /* This MUST match the Navbar height exactly */
+  padding: 20px;  flex: 1;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.content-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* Animated Hamburger Icon */
+.hamburger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 15px;
+  padding: 10px;
+}
+
+.nav-icon {
+  width: 20px;
+  height: 14px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-icon span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #1e293b;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* This makes the "X" when open */
+.nav-icon.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-icon.open span:nth-child(2) { opacity: 0; }
+.nav-icon.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }

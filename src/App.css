@@ -1,0 +1,141 @@
+:root {
+  --primary: #2563eb;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --bg-card: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+}
+
+.analysis-card {
+  background: var(--bg-card);
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  max-width: 850px;
+  margin: 40px auto;
+  transition: all 0.3s ease;
+}
+
+.analysis-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.level-tag {
+  background: #eff6ff;
+  color: var(--primary);
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Score Circular Progress */
+.score-widget {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.score-widget svg {
+  transform: rotate(-90deg);
+}
+
+.score-widget circle {
+  fill: none;
+  stroke: #f1f5f9;
+  stroke-width: 8;
+}
+
+.score-widget .progress {
+  stroke: var(--primary);
+  stroke-linecap: round;
+  stroke-dasharray: 283; /* 2 * PI * R (45) */
+  stroke-dashoffset: calc(283 - (283 * var(--percent)) / 100);
+  transition: stroke-dashoffset 1s ease-out;
+}
+
+.score-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+/* Skills Badges */
+.grid-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.badge-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.badge {
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.badge.found {
+  background: #f0fdf4;
+  color: #166534;
+  border: 1px solid #dcfce7;
+}
+
+.badge.missing {
+  background: #fff1f2;
+  color: #9f1239;
+  border: 1px solid #ffe4e6;
+}
+
+/* Recommendation Items */
+.recommendations h3 {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  color: var(--text-main);
+}
+
+.suggestion-item {
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+}
+
+.suggestion-item::before {
+  content: "→";
+  margin-right: 12px;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.suggestion-item:hover {
+  border-color: #cbd5e1;
+  background: white;
+  transform: scale(1.01);
+  transition: all 0.2s ease;
+}

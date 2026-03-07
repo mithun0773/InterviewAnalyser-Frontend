@@ -1,0 +1,105 @@
+:root {
+  --accent: #6366f1;
+  --bg-dark: #0f172a;
+  --glass: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+.matrix-container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+
+/* Role Select Tabs */
+.role-selector-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.role-tab {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 12px;
+  color: #94a3b8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.role-tab.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+}
+
+/* Premium Textarea */
+.textarea-wrapper { position: relative; }
+
+.matrix-input {
+  width: 100%;
+  height: 150px;
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 1.1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.matrix-input:focus { border-color: var(--accent); }
+
+/* The Action Button */
+.glow-button {
+  position: absolute;
+  bottom: 15px; right: 15px;
+  background: #0f172a;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+/* Bento Grid Cards */
+.bento-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.matrix-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.matrix-card:hover { transform: translateY(-5px); }
+
+.full-width { grid-column: span 3; }
+
+.pill {
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 4px;
+  display: inline-block;
+}
+
+.pill-green { background: #dcfce7; color: #166534; }
+.pill-red { background: #fee2e2; color: #991b1b; }
+
+.text-gradient {
+  background: linear-gradient(90deg, #4f46e5, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

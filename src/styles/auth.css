@@ -1,0 +1,132 @@
+:root {
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  --glass: rgba(255, 255, 255, 0.8);
+}
+
+.auth-page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-gradient);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background blobs for that "AI" feel */
+.auth-page-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+  top: -100px;
+  right: -100px;
+  z-index: 0;
+}
+
+.auth-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  padding: 20px;
+}
+
+.auth-box {
+  width: 100%;
+  max-width: 420px;
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  animation: authSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.auth-box h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.auth-box p.subtitle {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 30px;
+  font-size: 0.95rem;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.auth-input:focus {
+  border-color: var(--primary);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+  outline: none;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 14px;
+  background: #0f172a; /* Dark theme buttons look more premium */
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  margin-top: 10px;
+}
+
+.auth-btn:hover {
+  background: #1e293b;
+  transform: translateY(-2px);
+}
+
+.auth-msg {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: 0.85rem;
+  text-align: center;
+  border: 1px solid #fee2e2;
+}
+
+.auth-link {
+  margin-top: 25px;
+  text-align: center;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.auth-link a {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@keyframes authSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
