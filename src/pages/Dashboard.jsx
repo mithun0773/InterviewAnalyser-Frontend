@@ -60,18 +60,18 @@ export default function Dashboard() {
           <div className="bento-item actions-container">
             <h3>Accelerate with AI</h3>
             <div className="action-pills">
-              <a href="/resume" className="pill">
+              <Link to="/resume" className="pill">
                 📄 Analyzer
-              </a>
-              <a href="/skills" className="pill">
+              </Link>
+              <Link to="/skills" className="pill">
                 📊 Skills
-              </a>
-              <a href="/jobs" className="pill">
+              </Link>
+              <Link to="/jobs" className="pill">
                 💼 Jobs
-              </a>
-              <a href="/interview" className="pill">
+              </Link>
+              <Link to="/interview" className="pill">
                 🎤 Mock Prep
-              </a>
+              </Link>
             </div>
           </div>
 
